@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*, *::before, *::after{
+
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    background: linear-gradient(to right, #24bdb5, #10bb7a);
+    display: flex;
+    min-height: 100vh;
+    align-items:center ;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.clook{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+
+    
+
+}
+.clook .number{
+    --rotations:0;
+    position: absolute;
+    width:100% ;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotations));
+    font-size: 2rem;
+
+
+}
+.clook .number1{--rotations:30deg;}
+.clook .number2{--rotations:60deg;}
+.clook .number3{--rotations:90deg;}
+.clook .number4{--rotations:120deg;}
+.clook .number5{--rotations:150deg;}
+.clook .number6{--rotations:180deg;}
+.clook .number7{--rotations:210deg;}
+.clook .number8{--rotations:240deg;}
+.clook .number9{--rotations:270deg;}
+.clook .number10{--rotations:300deg;}
+.clook .number11{--rotations:330deg;}
+
+.clook .hand{
+    --rotations:0;
+    position: absolute;
+    left: 50%;
+    bottom:50% ;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotations) * 1deg));
+    background-color: #10bb7a;
+    z-index: 10;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+.clook::after{
+    content: "";
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+.clook .hand.hour{
+    width:10px ;
+    height: 35%;
+    background-color:black ;
+}
+.clook .hand.minute{
+    width: 6px;
+    height: 40%;
+    background-color:blue ;
+}
+.clook .hand.secund{
+    width: 2px;
+    height: 45%;
+    background-color: red;
+}
+
+
+
+
+.clook .hand .minut{
+    position: absolute;
+    width: 5px;
+    left: 50%;
+    height: 40%;
+    bottom:50% ;
+    background-color: #1013bb;
+    z-index: 2;
+
+}
+.clook .hand .secund{
+    position: absolute;
+    width: 3px;
+    left: 50%;
+    height: 40%;
+    bottom:50% ;
+    background-color: #3510bb;
+    z-index: 99;
+
+}
+
